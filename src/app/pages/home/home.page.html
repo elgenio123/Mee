@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list color="success">
+        <ion-item color="success">
+            <ion-avatar slot="start">
+                <img src="..\..\assets\img\h.jpg">
+            </ion-avatar>
+            <ion-label>
+                <h1>Genie Ricken</h1>
+                <p>Gathered : <span class="money">$ 15.00</span></p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <app-pickup-call-card hasHeader="true" hasFooter="true" status="hold" updatedAt="16/04/2022" createdAt="15/04/2022" notes=" We have two backs that are full, One with plastique and the other with cards"></app-pickup-call-card>
+    <ion-button color="success" fill="clear" size="full" (click)="pickupCalls()">See all...</ion-button>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button color="success" (click)="newPickupCall()">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

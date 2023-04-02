@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-back-button text=""></ion-back-button>
+        </ion-buttons>
+        <ion-title>My Pickup-calls</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list color="success">
+        <ion-item color="success">
+            <ion-avatar slot="start">
+                <img src="..\..\assets\img\h.jpg">
+            </ion-avatar>
+            <ion-label>
+                <h1>Genie Ricken</h1>
+                <p>Gathered : <span class="money">$ 15.00</span></p>
+            </ion-label>
+        </ion-item>
+    </ion-list>
+    <app-pickup-call-card status="hold" updatedAt="16/04/2022" createdAt="15/04/2022" notes=" We have two backs that are full, One with plastique and the other with cards"></app-pickup-call-card>
+    <app-pickup-call-card status="processing" updatedAt="16/04/2022" createdAt="15/04/2022" notes="We have two backs that are full, One with plastique and the other with cards"></app-pickup-call-card>
+    <app-pickup-call-card status="Finished" updatedAt="16/04/2022" createdAt="15/04/2022" value="$14.00"></app-pickup-call-card>
+
+</ion-content>

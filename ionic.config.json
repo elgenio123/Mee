@@ -1,0 +1,8 @@
+{
+  "name": "SMS",
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
+  "type": "angular"
+}

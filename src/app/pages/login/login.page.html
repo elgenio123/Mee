@@ -1,0 +1,34 @@
+<ion-toolbar color="success">
+    <ion-title>Login</ion-title>
+</ion-toolbar>
+<ion-content>
+    <div class="flex-content">
+        <form [formGroup]="form">
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title color="success">SMS</ion-card-title>
+                </ion-card-header>
+                <ion-card-content>
+                    <ion-item>
+                        <ion-label position="floating">Email</ion-label>
+                        <ion-input type="email" formControlName="email"></ion-input>
+                    </ion-item>
+                    <app-error-message [field]="form.get('email').touched && form.get('email').errors?.required" message="Email is mandatory"></app-error-message>
+
+                    <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.email">Email is invalid</ion-label>
+                    <ion-item>
+                        <ion-label position="floating">Password</ion-label>
+                        <ion-input type="password" formControlName="password"></ion-input>
+                    </ion-item>
+                    <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.required">Password is required</ion-label>
+                    <ion-item>
+                        <ion-button color="dark" size="full" fill="clear" [disabled]="!form.get('email').valid">Forgot password</ion-button>
+                    </ion-item>
+                    <ion-button color="success" size="full" (click)="login()" [disabled]="!form.valid">Login</ion-button>
+                    <ion-button color="success" size="full" fill="clear" (click)="register()">Register</ion-button>
+
+                </ion-card-content>
+            </ion-card>
+        </form>
+    </div>
+</ion-content>
